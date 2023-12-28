@@ -20,4 +20,4 @@ jobs:
           python-version: '3.10.7' # Specify the Python version you want to use
 
       - name: Run Python Script
-        run: python EVENTSINAMERICA/main.py
+        run: python EIA_main.py

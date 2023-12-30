@@ -23,7 +23,7 @@ facts= Variable.get('EventsInAmerica')
 
 
 def get_exhibitor_links():
-    csv_file_path=r"C:\Users\iamfa\OneDrive\Desktop\TRADESHOWS_DB\eventsInAmerica.csv"
+    csv_file_path=os.path.join(os.getcwd(),'eventsInAmerica.csv')
     show_links_dict = {}
     with open(csv_file_path, 'r', newline='', encoding='utf-8') as file:
     # Use csv.DictReader and skip the first row

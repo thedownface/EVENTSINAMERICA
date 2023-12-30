@@ -7,7 +7,7 @@ from Variables import Variable
 from alerts import alert_email
 import pandas as pd
 
-
+logging.info(f'reading Variable')
 facts=Variable.get('EventsInAmerica')
 
 

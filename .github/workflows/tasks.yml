@@ -25,4 +25,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Python Script
-        run: python EIA_main.py
+        run: python EIA_email_extractor.py

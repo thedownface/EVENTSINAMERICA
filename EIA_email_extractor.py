@@ -162,7 +162,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)
     browser = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
-    print('Browser Instance Created')
+    logging.info('Browser Instance Created')
     exhibitor_links = get_exhibitor_links()
     
     for show_name, exhibitor_link in exhibitor_links.items():

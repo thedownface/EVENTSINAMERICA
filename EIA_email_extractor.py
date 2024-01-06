@@ -161,7 +161,24 @@ def process_show(exhibitor_link, show_name):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)
-    browser = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
+    from browserstack.selenium import BrowserStack
+
+    desired_cap = {
+        'browser': 'Edge',
+        'browser_version': 'latest',
+        'os': 'Windows',
+        'os_version': '10',
+        'name': 'EventsInAmerica',  # Replace with your test name
+        # Add BrowserStack credentials
+        'browserstack.user': 'The_ faizans',
+        'browserstack.key': '6WYkjZ1PetqR3y7eodic'
+    }
+    
+    # Initialize BrowserStack WebDriver
+    browser = webdriver.Remote(
+        command_executor='https://hub-cloud.browserstack.com/wd/hub',
+        desired_capabilities=desired_cap
+)
     logging.info('Browser Instance Created')
     exhibitor_links = get_exhibitor_links()
     

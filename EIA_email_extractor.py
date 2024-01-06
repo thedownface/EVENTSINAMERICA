@@ -12,6 +12,8 @@ from tldextract import extract
 from selenium.webdriver.edge.service import Service as EdgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import logging
+from browserstack.selenium import BrowserStack
+from selenium import webdriver
 from urllib.parse import urlparse
 from selenium.webdriver.support.ui import WebDriverWait
 from Variables import Variable
